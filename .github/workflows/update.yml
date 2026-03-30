@@ -54,10 +54,10 @@ jobs:
           
           # Chỉ commit nếu có thay đổi
           if git diff --staged --quiet; then
-            echo "Không có thay đổi nào để cập nhật"
+            echo "🔥 Không có thay đổi nào"
           else
-            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+            TIMESTAMP=$(TZ='Asia/Ho_Chi_Minh' date +"%d/%m/%Y %H:%M")
             TOTAL=$(cat http.txt socks4.txt socks5.txt | wc -l)
-            git commit -m "🔄 Cập nhật danh sách proxy - ${TOTAL} proxy [${TIMESTAMP}]"
+            git commit -m "🔄 Cập nhật ${TOTAL} proxy [${TIMESTAMP}]"
             git push origin main
           fi
