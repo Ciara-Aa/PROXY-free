@@ -26,12 +26,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-
-      - name: 📦 Cài đặt thư viện
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests aiohttp
 
       - name: 🌐 Tải mã nguồn Scraper
         run: |
