@@ -1,39 +1,77 @@
-# 🌐 Danh Sách Proxy Miễn Phí (Tự Động Cập Nhật)
+<div align="center">
 
-Dự án thu thập và kiểm tra proxy hàng ngày từ các nguồn uy tín, đảm bảo tính ổn định và tốc độ tối ưu. Hoạt động hoàn toàn tự động qua GitHub Actions.
+# 🌐 PROXY FREE
 
----
+### Danh Sách Proxy Miễn Phí — Tự Động Cập Nhật
 
-### 📂 Danh Sách Proxy
+[![Proxy Count](https://img.shields.io/badge/Tổng_Proxy-13_226-blue?style=for-the-badge&logo=serverless&logoColor=white)](https://github.com/Ciara-Aa/PROXY-free)
+[![Update](https://img.shields.io/badge/Cập_nhật-Mỗi_30_phút-green?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/Ciara-Aa/PROXY-free/actions)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-| Loại Proxy | Đường dẫn file | Mô tả |
-| :--- | :--- | :--- |
-| **HTTP** | [http.txt](https://raw.githubusercontent.com/Ciara-Aa/Proxy/main/http.txt) | Proxy HTTP truyền thống |
-| **HTTPS** | [https.txt](https://raw.githubusercontent.com/Ciara-Aa/Proxy/main/https.txt) | Proxy HTTPS bảo mật (SSL) |
-| **SOCKS4** | [socks4.txt](https://raw.githubusercontent.com/Ciara-Aa/Proxy/main/socks4.txt) | Giao thức SOCKS phiên bản 4 |
-| **SOCKS5** | [socks5.txt](https://raw.githubusercontent.com/Ciara-Aa/Proxy/main/socks5.txt) | Giao thức SOCKS phiên bản 5 cao cấp |
+</div>
 
 ---
 
-### 📊 Thống Kê Chi Tiết
+## 📥 Tải Về Nhanh
 
-- **Tổng số Proxy sống: `127`**
-- **Proxy HTTP: `111`**
-- **Proxy HTTPS: `0`**
-- **Proxy SOCKS4: `16`**
-- **Proxy SOCKS5: `0`**
+| Giao Thức | Số Lượng | Tải Về |
+| :---: | :---: | :---: |
+| 🔵 **HTTP** | `5,585` | [📄 http.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/http.txt) |
+| 🟢 **HTTPS** | `400` | [📄 https.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/https.txt) |
+| 🟠 **SOCKS4** | `4,599` | [📄 socks4.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/socks4.txt) |
+| 🔴 **SOCKS5** | `2,642` | [📄 socks5.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/socks5.txt) |
+
+## 📊 Thống Kê
 
 ```mermaid
-pie title Tỷ lệ các loại Proxy
-    "HTTP" : 111
-    "HTTPS" : 0
-    "SOCKS4" : 16
-    "SOCKS5" : 0
+pie showData title Phân Bố Proxy Theo Giao Thức
+    "HTTP" : 5585
+    "HTTPS" : 400
+    "SOCKS4" : 4599
+    "SOCKS5" : 2642
 ```
 
-**📅 Cập nhật lần cuối: `31/03/2026 00:29:07`** (Giờ Việt Nam - GMT+7)
+<div align="center">
+
+| 📈 Chỉ Số | Giá Trị |
+| :--- | :---: |
+| **Tổng Proxy** | **13,226** |
+| **Nguồn thu thập** | **6** |
+| **Tần suất cập nhật** | **Mỗi 30 phút** |
+| **Định dạng** | `IP:PORT # TYPE [CC]` |
+
+</div>
+
+
+
+## ⚡ Sử Dụng Nhanh
+
+```bash
+# Tải danh sách HTTP proxy
+curl -sL https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/http.txt -o http.txt
+
+# Tải tất cả proxy
+for type in http https socks4 socks5; do
+  curl -sL "https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/${type}.txt" -o "${type}.txt"
+done
+```
+
+```python
+# Python
+import requests
+proxies = requests.get("https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/http.txt").text.splitlines()
+print(f"Đã tải {len(proxies)} proxy")
+```
 
 ---
 
-> [!TIP]
-> Danh sách này được cập nhật tự động mỗi giờ. Hãy bấm **Star** ⭐ để ủng hộ dự án nếu bạn thấy hữu ích!
+<div align="center">
+
+**📅 Cập nhật lần cuối: `31/03/2026 01:07:43`** (GMT+7)
+
+⭐ Nếu dự án hữu ích, hãy bấm **Star** để ủng hộ!
+
+</div>
+
+> [!WARNING]
+> **Miễn trách nhiệm:** Đây là proxy công cộng miễn phí, được thu thập từ các nguồn mở. Tốc độ và độ ổn định không được đảm bảo. Chỉ nên sử dụng cho mục đích nghiên cứu, học tập hoặc thử nghiệm. Người dùng tự chịu trách nhiệm về cách sử dụng.
