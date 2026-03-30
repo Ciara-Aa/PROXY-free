@@ -7,12 +7,12 @@
 
 ### 📊 Thống Kê Cập Nhật
 
-- **Tổng số: `0`**
-- **Proxy HTTP: `0`**
-- **Proxy SOCKS4: `0`**
+- **Tổng số: `142`**
+- **Proxy HTTP: `131`**
+- **Proxy SOCKS4: `11`**
 - **Proxy SOCKS5: `0`**
 
-**📅 Cập nhật: `Chưa quét`** (Giờ Việt Nam - GMT+7)
+**📅 Cập nhật: `30/03/2026 23:35:59`** (Giờ Việt Nam - GMT+7)
 
 ---
 
