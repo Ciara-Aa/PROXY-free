@@ -4,7 +4,7 @@
 
 ### Danh Sách Proxy Miễn Phí — Tự Động Cập Nhật
 
-[![Proxy Count](https://img.shields.io/badge/Tổng_Proxy-13_226-blue?style=for-the-badge&logo=serverless&logoColor=white)](https://github.com/Ciara-Aa/PROXY-free)
+[![Proxy Count](https://img.shields.io/badge/Tổng_Proxy-13_218-blue?style=for-the-badge&logo=serverless&logoColor=white)](https://github.com/Ciara-Aa/PROXY-free)
 [![Update](https://img.shields.io/badge/Cập_nhật-Mỗi_30_phút-green?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/Ciara-Aa/PROXY-free/actions)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
@@ -18,7 +18,7 @@
 | :---: | :---: | :---: |
 | 🔵 **HTTP** | `5,585` | [📄 http.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/http.txt) |
 | 🟢 **HTTPS** | `400` | [📄 https.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/https.txt) |
-| 🟠 **SOCKS4** | `4,599` | [📄 socks4.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/socks4.txt) |
+| 🟠 **SOCKS4** | `4,591` | [📄 socks4.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/socks4.txt) |
 | 🔴 **SOCKS5** | `2,642` | [📄 socks5.txt](https://raw.githubusercontent.com/Ciara-Aa/PROXY-free/refs/heads/main/socks5.txt) |
 
 ## 📊 Thống Kê
@@ -27,7 +27,7 @@
 pie showData title Phân Bố Proxy Theo Giao Thức
     "HTTP" : 5585
     "HTTPS" : 400
-    "SOCKS4" : 4599
+    "SOCKS4" : 4591
     "SOCKS5" : 2642
 ```
 
@@ -35,7 +35,7 @@ pie showData title Phân Bố Proxy Theo Giao Thức
 
 | 📈 Chỉ Số | Giá Trị |
 | :--- | :---: |
-| **Tổng Proxy** | **13,226** |
+| **Tổng Proxy** | **13,218** |
 | **Nguồn thu thập** | **6** |
 | **Tần suất cập nhật** | **Mỗi 30 phút** |
 | **Định dạng** | `IP:PORT # TYPE [CC]` |
@@ -67,7 +67,7 @@ print(f"Đã tải {len(proxies)} proxy")
 
 <div align="center">
 
-**📅 Cập nhật lần cuối: `31/03/2026 01:07:43`** (GMT+7)
+**📅 Cập nhật lần cuối: `31/03/2026 01:14:02`** (GMT+7)
 
 ⭐ Nếu dự án hữu ích, hãy bấm **Star** để ủng hộ!
 
