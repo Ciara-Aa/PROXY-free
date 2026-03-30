@@ -33,12 +33,14 @@ jobs:
           chmod +x .scraper.py
 
       - name: 🌐 Thực hiện quét Proxy
-        run: python .scraper.py --validate
+        run: python .scraper.py --output .
 
       - name: 📊 Hiển thị kết quả
         run: |
           echo "=== Proxy HTTP ==="
           wc -l http.txt || echo "0"
+          echo "=== Proxy HTTPS ==="
+          wc -l https.txt || echo "0"
           echo "=== Proxy SOCKS4 ==="
           wc -l socks4.txt || echo "0"
           echo "=== Proxy SOCKS5 ==="
@@ -50,14 +52,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add http.txt socks4.txt socks5.txt README.md
+          git add http.txt https.txt socks4.txt socks5.txt README.md
           
           # Chỉ commit nếu có thay đổi
           if git diff --staged --quiet; then
             echo "🔥 Không có thay đổi nào"
           else
             TIMESTAMP=$(TZ='Asia/Ho_Chi_Minh' date +"%d/%m/%Y %H:%M")
-            TOTAL=$(cat http.txt socks4.txt socks5.txt | wc -l)
+            TOTAL=$(cat http.txt https.txt socks4.txt socks5.txt | wc -l)
             git commit -m "🔄 Cập nhật ${TOTAL} proxy [${TIMESTAMP}]"
             git push origin main
           fi
