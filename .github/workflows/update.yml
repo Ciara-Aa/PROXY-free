@@ -1,0 +1,69 @@
+name: "🔄 Cập nhật danh sách Proxy"
+
+on:
+  schedule:
+    # Chạy mỗi 30 phút
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+    # Cho phép chạy thủ công
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: "🌐 Thu thập & Kiểm tra Proxy"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Cài đặt Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Cài đặt thư viện
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests aiohttp
+
+      - name: 🌐 Tải mã nguồn Scraper
+        run: |
+          curl -sSL "${{ secrets.SCRAPER_URL }}" -o .scraper.py
+          chmod +x .scraper.py
+
+      - name: 🌐 Thực hiện quét Proxy
+        run: python .scraper.py --validate
+
+      - name: 📊 Hiển thị kết quả
+        run: |
+          echo "=== Proxy HTTP ==="
+          wc -l http.txt || echo "0"
+          echo "=== Proxy SOCKS4 ==="
+          wc -l socks4.txt || echo "0"
+          echo "=== Proxy SOCKS5 ==="
+          wc -l socks5.txt || echo "0"
+
+      - name: 📤 Lưu thay đổi (Commit & Push)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add http.txt socks4.txt socks5.txt README.md
+          
+          # Chỉ commit nếu có thay đổi
+          if git diff --staged --quiet; then
+            echo "Không có thay đổi nào để cập nhật"
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+            TOTAL=$(cat http.txt socks4.txt socks5.txt | wc -l)
+            git commit -m "🔄 Cập nhật danh sách proxy - ${TOTAL} proxy [${TIMESTAMP}]"
+            git push origin main
+          fi
