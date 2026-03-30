@@ -17,21 +17,21 @@ Dự án thu thập và kiểm tra proxy hàng ngày từ các nguồn uy tín, 
 
 ### 📊 Thống Kê Chi Tiết
 
-- **Tổng số Proxy sống: `142`**
-- **Proxy HTTP: `128`**
+- **Tổng số Proxy sống: `127`**
+- **Proxy HTTP: `111`**
 - **Proxy HTTPS: `0`**
-- **Proxy SOCKS4: `14`**
+- **Proxy SOCKS4: `16`**
 - **Proxy SOCKS5: `0`**
 
 ```mermaid
 pie title Tỷ lệ các loại Proxy
-    "HTTP" : 128
+    "HTTP" : 111
     "HTTPS" : 0
-    "SOCKS4" : 14
+    "SOCKS4" : 16
     "SOCKS5" : 0
 ```
 
-**📅 Cập nhật lần cuối: `31/03/2026 00:23:59`** (Giờ Việt Nam - GMT+7)
+**📅 Cập nhật lần cuối: `31/03/2026 00:29:07`** (Giờ Việt Nam - GMT+7)
 
 ---
 
