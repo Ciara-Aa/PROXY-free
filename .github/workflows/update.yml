@@ -61,5 +61,6 @@ jobs:
             TIMESTAMP=$(TZ='Asia/Ho_Chi_Minh' date +"%d/%m/%Y %H:%M")
             TOTAL=$(cat http.txt https.txt socks4.txt socks5.txt | wc -l)
             git commit -m "🔄 Cập nhật ${TOTAL} proxy [${TIMESTAMP}]"
+            git pull --rebase origin main
             git push origin main
           fi
