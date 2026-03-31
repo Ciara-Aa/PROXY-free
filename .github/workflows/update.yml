@@ -33,7 +33,7 @@ jobs:
           chmod +x .scraper.py
 
       - name: 🌐 Thực hiện quét Proxy
-        run: python .scraper.py --output .
+        run: python .scraper.py --validate --output .
 
       - name: 📊 Hiển thị kết quả
         run: |
