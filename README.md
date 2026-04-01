@@ -36,7 +36,7 @@
 | :--- | :---: |
 | **Tổng Proxy** | **1,356** |
 | **Nguồn thu thập** | **10** |
-| **Tần suất cập nhật** | **Mỗi 30 phút** |
+| **Tần suất cập nhật** | **Mỗi 2 giờ** |
 | **Định dạng** | `IP:PORT # TYPE [CC]` |
 
 </div>
